@@ -1,0 +1,237 @@
+body {
+	margin:0;
+	font-family:helvetica;
+    background:#628db3 url(../images/background.png) repeat-x;
+}
+
+#main {
+    margin:auto;	
+    width:1200px;
+}
+
+noscript {
+	color:white;	
+}
+
+div#header{
+    background:url(../images/logo.png) no-repeat 25px top;
+	position:relative;
+	width:100%;		
+    height:100px;
+	text-align:center;
+	color:white;
+	line-height:1.25em;
+	font-size:20pt;	
+	margin:15px 0;
+}
+
+div#header div#nom, .skill {
+	font-family:"Arial Black" Arial;
+	font-weight:bold;
+}
+div#header h1 {
+    font-size:50pt;
+    margin-bottom:20px;
+}
+div#header h2 {
+	margin-top:10px;
+    font-size:17pt;
+}
+
+#content {
+	position:relative;	
+	width:100%;
+}
+
+#mainContainer {
+	position:relative;
+	width:100%;
+	height:560px;
+	/*background:url(tom.png) no-repeat center;*/
+}
+
+.hidden {
+    display:none;
+}
+
+#popup {
+    background:rgba(0,0,0,0.5);
+    position:fixed;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+}
+
+#popupContent {
+    font-family:"Times New Roman";
+    padding:10px;
+    background:white;
+    margin:50px auto;
+    border-radius:5px;
+    width:500px;
+}   
+#popupContent H1, #popupContent H2 {
+    font-family:Arial;
+}
+#popupContent H2 {
+    margin:0;
+    border-bottom:solid 1px gray;
+}
+
+#popupContent p {
+    margin:5px 0;
+}
+
+#skillsContainer {
+	left:5%;
+	margin:auto;
+	width:90%;	
+    color:white;	
+}
+
+#experienceContainer {
+	position:absolute;
+	top:0px;
+	height:560px;
+	width:100%;
+    overflow:hidden;
+}
+
+.skill {
+	display:inline-block;	
+	width:20%;
+	text-align:center;
+    text-decoration:underline;
+}
+
+.experience {
+	position:absolute;
+    width:200px;
+    border:3px solid;
+    background:white;
+    border-radius:5px;
+}
+
+.experience:hover {
+    cursor:pointer;
+}
+
+.experience p {
+	margin:5px;
+}
+
+.experience.type_0{
+    border-color:#40411E;
+}
+.experience.type_0 .type {
+    background-color:#40411E;
+}
+
+.experience.type_1 {
+    border-color:#046380;
+}
+.experience.type_1 .type{
+    background:#046380;
+}
+
+.experience.type_2 {
+    border-color:#333333;
+}
+.experience.type_2 .type{
+    background:#333333;
+}
+
+.experience .type {
+    color:white;
+    padding:0 5px;
+    font-weight:bold;
+}
+
+.experience .title {
+    text-align:center;
+    font-weight:bold;
+}
+
+#divMe {
+    width:100%;
+    height:350px;
+    position:relative;
+    overflow:hidden;
+    /*top:50px;
+    position:absolute;*/
+}
+
+#footer {
+	background:#1F1F1F;
+    text-align:center;
+    color:white;
+    padding-top:5px;
+}
+
+.cloud {
+    color:gray;
+    text-align:center;
+    padding-top:25px;
+    font-weight:bold;
+    font-size:15pt;
+    background-repeat:no-repeat;
+    height:92px;
+    width:200px;
+    position:absolute;
+}
+
+.cloud:hover {
+    cursor:pointer;
+}
+
+
+.highSpeed, .middleHighSpeed, .middleSpeed, .middleSlowSpeed, .slowSpeed {
+    -moz-transition-timing-function: linear; 
+    -moz-transition-property:left; 
+    -webkit-transition-timing-function: linear; 
+    -webkit-transition-property:left; 
+    -o-transition-timing-function: linear; 
+    -o-transition-property:left;  
+}
+
+.highSpeed {
+	background:url(../images/cloudHS.png) no-repeat;
+    -moz-transition-duration: 10s;  
+    -webkit-transition-duration: 10s; 
+    -o-transition-duration: 10s; 
+
+}
+
+.middleHighSpeed {
+	background:url(../images/cloudMHS.png) no-repeat;
+    -moz-transition-duration: 12s; 
+    -webkit-transition-duration: 12s; 
+    -o-transition-duration: 12s;  
+
+}
+
+.middleSpeed {
+	background:url(../images/cloudMS.png) no-repeat;
+    -moz-transition-duration: 15s; 
+    -webkit-transition-duration: 15s; 
+    -o-transition-duration: 15s;  
+
+}
+
+
+.middleSlowSpeed {
+	background:url(../images/cloudMSS.png) no-repeat;
+    -moz-transition-duration: 18s; 
+    -webkit-transition-duration: 18s; 
+    -o-transition-duration: 18s;  
+
+}
+
+.slowSpeed {
+	background:url(../images/cloudSS.png) no-repeat;
+    -moz-transition-duration: 20s;  
+    -o-transition-duration: 20s;
+    -webkit-transition-duration: 20s;  
+}
+
