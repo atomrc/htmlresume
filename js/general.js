@@ -1,5 +1,5 @@
 /*
-*	PhyResume
+*	htmlresume : an original way to diplay a resume
 *	Thomas Belin
 */
 
@@ -13,6 +13,7 @@ const floatPrecision = 5;
 
 const nbClouds = 5;
 const cloudSpeedClasses = ["highSpeed", "middleHighSpeed", "slowSpeed", "middleSlowSpeed", "middleSpeed"];
+
 
 function keyPressed(event) {
 	switch(event.charCode) {
@@ -43,9 +44,6 @@ function runExpAnim() {
 		requestAnimFrame(runExpAnim);
 	}
 }
-
-
-
 /****************************************** 
 	MODEL 
 ******************************************/
@@ -68,8 +66,10 @@ var arrayOfWords = [	new Word("Musicien", "Guitariste passioné depuis maintenan
 			new Word("Consciencieux", "Je ne me contente jamais de faire quelque chose qui fonctionne. Je fais tout pour qu'il fonctionne le mieux possible."),
 			new Word("Sportif", "Parce que le crédo : \"Un corps sain dans un esprit sain\" semble très important à mes yeux, je pratique régulièrement le jogging."), 
 			new Word("Determiné", "J'aime me lancer des défis, et je me donne les moyens de relever ces défis."), 
-			new Word("Impliqué", "Quand je fais quelque chose je le fais à fond.")];
-
+			new Word("Impliqué", "Quand je fais quelque chose je le fais à fond.")];/*
+*	PhyResume
+*	Thomas Belin
+*/
 
 /****************************************** 
 	VIEWS 
@@ -562,15 +562,12 @@ CVController.prototype = {
 			context.closePath();	
 		
 			context.stroke();
-		}else {
-		}	
-		
-
+		}
 	}
 }
 
 
-/* The controller that updates and draw the cloud in the resume */
+/* The controller that updates and draw the cloud in the document */
 function CloudController(divId) {
 	this.container = document.getElementById(divId); 
 	this.arrayOfWords = ["Créatif", "Dynamique", "Musicien", "Sportif", "Ouvert d'esprit", "Social", "Consciencieux"];

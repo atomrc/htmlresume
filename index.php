@@ -6,6 +6,7 @@
 		<link rel="stylesheet" type="text/css" href="style/style.css"/>
 		<script type="text/javascript" src="js/general.js"></script>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link rel="shortcut icon" href="images/favicon.ico" />
 		
 		<!-- Piwik -->
 		<script type="text/javascript">
