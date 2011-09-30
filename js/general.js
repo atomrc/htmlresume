@@ -200,7 +200,6 @@ Experience.prototype = {
 
 		expDiv.onmousedown = (function(event) { this.mouseDown(event) }).bind(this);
 		expDiv.onmouseup = (function() { this.mouseUp() }).bind(this);
-		expDiv.onmousemove = (function(event) { this.mouseMove(event); }).bind(this);
 		expDiv.onclick = (function(event) { this.showDetails() }).bind(this);
 
 		this.domElement = expDiv;
@@ -223,11 +222,13 @@ Experience.prototype = {
 		this.selected = true;
 		this.mousePoint = new CVPoint(event.clientX, event.clientY);
 		this.moving = false;
+		document.onmousemove = (function(event) { this.mouseMove(event)}).bind(this);
 	},
 
 	mouseUp:function() {
 		this.selected = false;
 		this.domElement.style.zIndex = 0;
+		document.onmousemove = null;
 	},
 	
 	mouseMove:function(event) {
