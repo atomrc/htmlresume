@@ -142,10 +142,17 @@ div#header h2 {
     background:#333333;
 }
 
-.experience .type {
-    color:white;
+.experience .type{
+}
+
+.experience .type, .experience .open {
     padding:0 5px;
+    color:white;
     font-weight:bold;
+}
+
+.experience .open {
+	background:orange;
 }
 
 .experience .title {

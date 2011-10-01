@@ -13,6 +13,7 @@
 			\"descriptionShort\":\"".$row['desc_short']."\",
 			\"description\":\"".$row['desc']."\",
 			\"image\":\"".$row['image']."\",
+			\"open\":".$row['open'].",
 			\"other\":\"".$row['other']."\",
 			\"skills\":[";
 		$resLinks = $db->query("SELECT id_skill, name, size FROM links 

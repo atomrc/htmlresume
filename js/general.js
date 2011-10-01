@@ -185,6 +185,14 @@ Experience.prototype = {
 		typeDiv.className = "type";
 		typeDiv.innerHTML = exp.typeStr;
 		expDiv.appendChild(typeDiv);
+
+		if(exp.open != 0) {
+			var openDiv = document.createElement("span");
+			openDiv.className = "open";
+			openDiv.innerHTML = "Open Source";
+			expDiv.innerHTML += "<br/>";
+			expDiv.appendChild(openDiv);
+		}
 		
 		//title div
 		var titleDiv = document.createElement("div");

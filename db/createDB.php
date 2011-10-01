@@ -26,6 +26,7 @@
 					desc TEXT,
 					image TEXT,
 					other TEXT,
+					open INTEGER DEFAULT 0,
 					date_start TEXT,
 					date_end TEXT,
 					type INTEGER
@@ -56,13 +57,14 @@
 	
 
 	/****************************************** CV WEB ************************************************/
-	$db->query("INSERT OR REPLACE INTO experience (_id, title, company, desc_short, desc, other, date_start, type) VALUES (
+	$db->query("INSERT OR REPLACE INTO experience (_id, title, company, desc_short, desc, other, open, date_start, type) VALUES (
 				0, 
 				'CV web', 
 				'', 
 				'Création d''un CV utilisant les technologies HTML5, Javascript et CSS transition.', 
-				'Voulant faire mon stage de fin d''étude dans le domaine du web et tout particulièrement du HTML5, j''ai décidé de me créer un CV entièrement avec ces technologies. <br/>J''ai volontairement tout réalisé moi même (du moteur physique aux animations CSS) avec les nouveaux standards du web et sans aucun framework (Ce que les anglais pourraient appeler \\\"from scracth\\\"). <br/>Le résultat, vous l''avez en ce moment même sous les yeux.',
+				'Voulant faire mon stage de fin d''étude dans le domaine du web et tout particulièrement du HTML5, j''ai décidé de me créer un CV entièrement avec ces technologies. <br/>J''ai volontairement tout réalisé moi même (du moteur physique aux animations CSS) avec les nouveaux standards du web et sans aucun framework (Ce que les anglais pourraient appeler \\\"from scracth\\\"). <br/>Le résultat, vous l''avez en ce moment même sous les yeux.<br/> Ce projet étant Open Source, celles-ci peuvent être récupérées ici : <a href=\\\"http://github.com/thomasbelin4/htmlresume\\\">http://github.com/thomasbelin4/htmlresume</a>',
 				'<ul><li>Développement d''une application Javascript avec les techniques de développement des jeux vidéos (moteur physique, boucle applicative...)</li><li>Optimisation forte d''un code Javascript (limiter le reflow/repaint, regrouper les opérations de dessins, limiter les opérations à chaque tour de boucle ...)</li><li>Manipulation des CSS transitions</li><ul>',
+				1,
 				'',
 				1);");
 				
@@ -176,13 +178,14 @@
 	$db->query("INSERT OR REPLACE INTO links (id_skill, id_experience, size) VALUES (1, 7, 400);");	
 				
 	/****************************************** VIEILLES CHARRUES ************************************************/
-	$db->query("INSERT OR REPLACE INTO experience (_id, title, company, desc_short, desc, other, date_start, type) VALUES (
+	$db->query("INSERT OR REPLACE INTO experience (_id, title, company, desc_short, desc, other, open, date_start, type) VALUES (
 				8, 
 				'Application iPhone Vieilles Charrues', 
 				'', 
 				'Développement d''une application Open Source pour le festival des Vieilles Charrues.', 
-				'En 2010, le festival des Vieilles Charrues cherchait à faire une application iPhone et Android. Mes connaissances d''Objective-C n''étaient que très sommaires, mais, aimant les défis, je me suis proposer pour faire l''application iPhone. Ce fut une expérience très enrichissante qui m''a permis de me plonger dans le développement pour mobiles. Ce projet est Open Source et les sources peuvent être récupérées <a href=\\\"http://code.google.com/p/vieillescharrues/\\\"> ici</a>', 
+				'En 2010, le festival des Vieilles Charrues cherchait à faire une application iPhone et Android. Mes connaissances d''Objective-C n''étaient que très sommaires, mais, aimant les défis, je me suis proposer pour faire l''application iPhone. Ce fut une expérience très enrichissante qui m''a permis de me plonger dans le développement pour mobiles. Ce projet est Open Source et les sources peuvent être récupérées ici : <a href=\\\"https://github.com/thomasbelin4/Vieilles-Charrues-iPhone\\\">https://github.com/thomasbelin4/Vieilles-Charrues-iPhone</a>', 
 				'<ul><li>Développement d''une application iPhone</li><li>RTFM</li></ul>',
+				1,
 				'', 
 				1);");
 				
