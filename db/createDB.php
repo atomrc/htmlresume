@@ -92,7 +92,7 @@
 				2, 
 				'Module de vue chronologique HTML5', 
 				'', 
-				'Mise en place d''un module de vue chronologique pour un CV.', 
+				'Mise en place d''un module de vue chronologique pour un CV (<a href=\\\"http://cv.thomasbelin.fr/timeline/\\\">cv.thomasbelin.fr/timeline</a>)', 
 				'Je voulais pouvoir présenter mes diverses expériences sous une autre forme qu''une liste. Je voulais les afficher sur une frise chronologique. J''ai donc développé un module utilisant uniquement la balise &lt;canvas&gt; d''HTML5 pour présenter mes expériences en informatique.<br/> Les sources sont disponibles ici : <a href=\\\"https://github.com/thomasbelin4/timeline\\\">https://github.com/thomasbelin4/timeline</a>', 
 				'<ul><li>Manipulation poussée de la balise &lt;canvas&gt;/Javascript offert par HTML5</li></ul>',
 				'images/timeline.png', 
