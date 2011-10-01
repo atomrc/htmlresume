@@ -88,14 +88,15 @@
 	$db->query("INSERT OR REPLACE INTO links (id_skill, id_experience, size) VALUES (2, 1, 175);");			
 			
 	/****************************************** VUE CHRONO ************************************************/
-	$db->query("INSERT OR REPLACE INTO experience (_id, title, company, desc_short, desc, other, image, date_start, type) VALUES (
+	$db->query("INSERT OR REPLACE INTO experience (_id, title, company, desc_short, desc, other, image, open, date_start, type) VALUES (
 				2, 
 				'Module de vue chronologique HTML5', 
 				'', 
 				'Mise en place d''un module de vue chronologique pour un CV.', 
-				'Je voulais pouvoir présenter mes diverses expériences sous une autre forme qu''une liste. Je voulais les afficher sur une frise chronologique. J''ai donc développé un module utilisant uniquement la balise &lt;canvas&gt; d''HTML5 pour présenter mes expériences en informatique.<br/>', 
+				'Je voulais pouvoir présenter mes diverses expériences sous une autre forme qu''une liste. Je voulais les afficher sur une frise chronologique. J''ai donc développé un module utilisant uniquement la balise &lt;canvas&gt; d''HTML5 pour présenter mes expériences en informatique.<br/> Les sources sont disponibles ici : <a href=\\\"https://github.com/thomasbelin4/timeline\\\">https://github.com/thomasbelin4/timeline</a>', 
 				'<ul><li>Manipulation poussée de la balise &lt;canvas&gt;/Javascript offert par HTML5</li></ul>',
 				'images/timeline.png', 
+				1,
 				'',
 				1);");
 				
