@@ -64,9 +64,10 @@ Word.prototype = {
 var arrayOfWords = [	new Word("Musicien", "Guitariste passioné depuis maintenant 7 ans, je joue régulièrement en groupe."), 
 			new Word("Créatif", "Un minimum d'originalité demande un minimum de créativité."), 
 			new Word("Consciencieux", "Je ne me contente jamais de faire quelque chose qui fonctionne. Je fais tout pour qu'il fonctionne le mieux possible."),
-			new Word("Sportif", "Parce que le crédo : \"Un corps sain dans un esprit sain\" semble très important à mes yeux, je pratique régulièrement le jogging."), 
-			new Word("Determiné", "J'aime me lancer des défis, et je me donne les moyens de relever ces défis."), 
-			new Word("Impliqué", "Quand je fais quelque chose je le fais à fond.")];/*
+			new Word("Sportif", "Parce que le crédo : \"Un corps sain dans un esprit sain\" semble très important à mes yeux, je pratique régulièrement le jogging et l'aviron."), 
+			new Word("Déterminé", "J'aime me lancer des défis, et je me donne les moyens de les relever"),
+			new Word("Impliqué", "Quand je fais quelque chose je le fais à fond.")];
+/*
 *	PhyResume
 *	Thomas Belin
 */
@@ -259,7 +260,7 @@ Experience.prototype = {
 			img = "<img src='"+model.image+"' />";
 		}
 		if(model.other) {
-			other = "<h2>Compétences aquises</h2><div class=\"other\">"+model.other+"</p></div>";
+			other = "<h2>Compétences acquises</h2><div class=\"other\">"+model.other+"</p></div>";
 		}
 		if(model.description) {
 			desc = "<h2>Description</h2><div class=\"description\"><p>"+this.model.description+"</p></div>";

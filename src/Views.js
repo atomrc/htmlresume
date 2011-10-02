@@ -191,7 +191,7 @@ Experience.prototype = {
 			img = "<img src='"+model.image+"' />";
 		}
 		if(model.other) {
-			other = "<h2>Compétences aquises</h2><div class=\"other\">"+model.other+"</p></div>";
+			other = "<h2>Compétences acquises</h2><div class=\"other\">"+model.other+"</p></div>";
 		}
 		if(model.description) {
 			desc = "<h2>Description</h2><div class=\"description\"><p>"+this.model.description+"</p></div>";

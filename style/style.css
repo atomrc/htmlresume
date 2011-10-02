@@ -79,8 +79,9 @@ div#header h2 {
     border-bottom:solid 1px gray;
 }
 
-#popupContent p {
-    margin:5px 0;
+#popupContent ul, #popupContent p {
+	text-align:justify;
+	margin:5px 0 20px 0;
 }
 
 #skillsContainer {
@@ -119,6 +120,7 @@ div#header h2 {
 
 .experience p {
 	margin:5px;
+	text-align:center;
 }
 
 .experience.type_0{

@@ -62,7 +62,7 @@
 				'CV web', 
 				'', 
 				'Création d''un CV utilisant les technologies HTML5, Javascript et CSS transition.', 
-				'Voulant faire mon stage de fin d''étude dans le domaine du web et tout particulièrement du HTML5, j''ai décidé de me créer un CV entièrement avec ces technologies. <br/>J''ai volontairement tout réalisé moi même (du moteur physique aux animations CSS) avec les nouveaux standards du web et sans aucun framework (Ce que les anglais pourraient appeler \\\"from scracth\\\"). <br/>Le résultat, vous l''avez en ce moment même sous les yeux.<br/> Ce projet étant Open Source, celles-ci peuvent être récupérées ici : <a href=\\\"http://github.com/thomasbelin4/htmlresume\\\">http://github.com/thomasbelin4/htmlresume</a>',
+				'Désirant faire mon stage de fin d''études dans le domaine du web et tout particulièrement du HTML5, j''ai décidé de créer un CV entièrement avec ces technologies. <br/>J''ai volontairement tout réalisé moi-même (du moteur physique aux animations CSS) avec les nouveaux standards du web et sans aucun framework. <br/>Le résultat, vous l''avez en ce moment même sous les yeux.<br/> Ce projet étant Open Source, les sources peuvent être récupérées ici : <a href=\\\"http://github.com/thomasbelin4/htmlresume\\\">http://github.com/thomasbelin4/htmlresume</a>',
 				'<ul><li>Développement d''une application Javascript avec les techniques de développement des jeux vidéos (moteur physique, boucle applicative...)</li><li>Optimisation forte d''un code Javascript (limiter le reflow/repaint, regrouper les opérations de dessins, limiter les opérations à chaque tour de boucle ...)</li><li>Manipulation des CSS transitions</li><ul>',
 				1,
 				'',
@@ -79,7 +79,7 @@
 				'Site du gala Polytech By Night', 
 				'', 
 				'Création du site du gala de l''école Polytech Nantes (<a href=\\\"http://polytechbynight.fr\\\">polytechbynight.fr</a>).', 
-				'Je me suis proposé de développer le site web du gala de mon école pour l''année 2011. Le site disposant d''une gestion des utilisateurs, d''un système de paiement par Paypal et d''un module de réservation en Javascript, celui-ci demandait d''être attentif à un certain nombre de choses.', 
+				'Je me suis proposé de développer le site web du gala de mon école pour l''année 2011. Le site dispose d''une gestion des utilisateurs, d''un système de paiement par Paypal et d''un module de réservation en Javascript. Ceci nécessitait une sécurisation optimale du site.', 
 				'<ul><li>Gestion des utilisateurs en PHP</li><li>Sécurisation d''un site (XSS, SQL injection)</li></ul>', 
 				'',
 				1);");
@@ -93,7 +93,7 @@
 				'Module de vue chronologique HTML5', 
 				'', 
 				'Mise en place d''un module de vue chronologique pour un CV (<a href=\\\"http://cv.thomasbelin.fr/timeline/\\\">cv.thomasbelin.fr/timeline</a>)', 
-				'Je voulais pouvoir présenter mes diverses expériences sous une autre forme qu''une liste. Je voulais les afficher sur une frise chronologique. J''ai donc développé un module utilisant uniquement la balise &lt;canvas&gt; d''HTML5 pour présenter mes expériences en informatique.<br/> Les sources sont disponibles ici : <a href=\\\"https://github.com/thomasbelin4/timeline\\\">https://github.com/thomasbelin4/timeline</a>', 
+				'Je voulais pouvoir présenter mes diverses expériences sous une autre forme qu''une liste et les afficher sur une frise chronologique. J''ai donc développé un module utilisant uniquement la balise &lt;canvas&gt; d''HTML5 pour présenter mes expériences en informatique.<br/> Les sources sont disponibles ici : <a href=\\\"https://github.com/thomasbelin4/timeline\\\">https://github.com/thomasbelin4/timeline</a>', 
 				'<ul><li>Manipulation poussée de la balise &lt;canvas&gt;/Javascript offert par HTML5</li></ul>',
 				'images/timeline.png', 
 				1,
@@ -110,8 +110,8 @@
 				3, 
 				'Greencopper', 
 				'', 
-				'Stage au Canada chez Greencopper, éditeur d''applications mobiles pour festivals.', 
-				'Un stage très formateur chez Greencopper une entreprise spécialisée dans les applications mobiles pour festivals. Parmi leurs clients, on compte Rock en Seine, le Festival de Jazz de Montréal, les Vieilles Charrues ... <br/> Ce stage m''a permis de m''attaquer à des problématiques avancées d''optimisation avec le développement d''un module générique de vue calendrier pour iPhone.', 
+				'Stage au Canada chez Greencopper, éditeur d''applications mobiles pour festivals.<br/> (été 2011)', 
+				'Mon stage, de juin à août 2011, chez Greencopper, une entreprise spécialisée dans les applications mobiles de festivals, a été très formatteur. Parmi leurs clients, on compte Rock en Seine, le Festival de Jazz de Montréal, les Vieilles Charrues ... <br/> Ce stage m''a permis de m''attaquer à des problématiques avancées d''optimisation avec le développement d''un module générique de vue calendrier pour iPhone.', 
 				'<ul><li>Techniques d''optimisation générales (recycleur, réduction du nombre de vues dans une page, regroupement de requêtes SQL …)</li></ul>',
 				'',
 				0);");
@@ -125,13 +125,13 @@
 				4, 
 				'DPC', 
 				'', 
-				'Stage chez DPC-interactive, éditeur d''applications mobiles.', 
-				'Après avoir développé l''application iPhone du festival des Vieilles Charrues, le domaine des applications mobiles me plaisait beaucoup et j''ai donc décidé de faire mon stage dans une entreprise de ce type. Ce stage chez DPC fut très enrichissant.', 
+				'Stage chez DPC-interactive, éditeur d''applications mobiles. <br/> (été 2010)', 
+				'Après avoir développé l''application iPhone du festival des Vieilles Charrues, le champ des applications mobiles me plaisait beaucoup et j''ai donc décidé de faire mon stage dans une entreprise spécialisée dans ce domaine. Ce stage chez DPC fut très enrichissant.', 
 				'', 
 				0);");
 				
 	
-	$db->query("INSERT OR REPLACE INTO links (id_skill, id_experience, size) VALUES (4, 4, 250);");
+	$db->query("INSERT OR REPLACE INTO links (id_skill, id_experience, size) VALUES (4, 4, 225);");
 
 
 	/****************************************** SITE PERSO ************************************************/
@@ -140,7 +140,7 @@
 				'Site web perso', 
 				'', 
 				'Mise en place de mon site web personnel (<a href=\\\"http://thomasbelin.fr\\\">thomasbelin.fr</a>)', 
-				'Pour ma recherche de stages pour l''été 2011, je voulais avoir un support un peu plus fort qu''un simple CV pour appuyer ma candidature. J''ai donc mis en place, de zéro, mon site personnel.', 
+				'Pour ma recherche de stage pour l''été 2011, je voulais avoir un support plus percutant qu''un simple CV pour appuyer ma candidature. J''ai donc mis en place, de zéro, mon site personnel.', 
 				'<ul><li>Création d''un site complet en PHP</li></ul>', 
 				'',
 				1);");
@@ -154,7 +154,7 @@
 				'Site de gestion de formations', 
 				'', 
 				'Réalisation, en binôme, d''un site de gestion des formations pour Polytech', 
-				'Un projet de nos études à été de réaliser un site de gestion des formations proposées par Polytech. Nous étions en binôme et avions le choix des technologies et comme nous connaissions, tous les deux, bien PHP, nous avons décidé de ... ne pas l''utiliser. C''est pourquoi nous nous sommes tournés vers Python et le framework Django pour mettre en oeuvre notre projet.', 
+				'Un des projets de nos études a été de réaliser un site de gestion des formations proposées par Polytech. Nous étions en binôme et avions le choix des technologies et comme nous connaissions, tous les deux, bien PHP, nous avons décidé de ... ne pas l''utiliser. C''est pourquoi nous nous sommes tournés vers Python et le framework Django pour mettre en oeuvre notre projet.', 
 				'<ul><li>Découverte de Django</li><li>Gestion des utilisateurs avec le framework Django</li></ul>',
 				'', 
 				2);");
@@ -183,7 +183,7 @@
 				8, 
 				'Application iPhone Vieilles Charrues', 
 				'', 
-				'Développement d''une application Open Source pour le festival des Vieilles Charrues.', 
+				'Développement d''une application Open Source pour le festival des Vieilles Charrues 2010.', 
 				'En 2010, le festival des Vieilles Charrues cherchait à faire une application iPhone et Android. Mes connaissances d''Objective-C n''étaient que très sommaires, mais, aimant les défis, je me suis proposer pour faire l''application iPhone. Ce fut une expérience très enrichissante qui m''a permis de me plonger dans le développement pour mobiles. Ce projet est Open Source et les sources peuvent être récupérées ici : <a href=\\\"https://github.com/thomasbelin4/Vieilles-Charrues-iPhone\\\">https://github.com/thomasbelin4/Vieilles-Charrues-iPhone</a>', 
 				'<ul><li>Développement d''une application iPhone</li><li>RTFM</li></ul>',
 				1,
@@ -191,7 +191,7 @@
 				1);");
 				
 	
-	$db->query("INSERT OR REPLACE INTO links (id_skill, id_experience, size) VALUES (4, 8, 400);");
+	$db->query("INSERT OR REPLACE INTO links (id_skill, id_experience, size) VALUES (4, 8, 350);");
 
 	
 
