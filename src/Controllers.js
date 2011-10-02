@@ -155,9 +155,12 @@ CloudController.prototype = {
 	},
 
 	startAllAnim:function() {
+		var i = 0;
 		for(cloudIndex in this.visibleCloud) {
 			var cloud = this.visibleCloud[cloudIndex];
-			cloud.startAnim(); 
+			var func = (function() {this.startAnim();}).bind(cloud);
+			setTimeout(func, i*2000);
+			i++;
 			
 		}
 	}
