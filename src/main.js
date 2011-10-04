@@ -11,7 +11,8 @@ function keyPressed(event) {
 
 //Init the resume controller
 function initCV() {
-	
+
+	if(isCompatible()) {
 	document.onkeypress = keyPressed;
 
 	cvController = new CVController("mainContainer");
@@ -20,6 +21,9 @@ function initCV() {
 	cloudController = new CloudController("divMe");
 	cloudController.init();
 	runExpAnim();	//launch the animation of the physical engine
+	} else {
+		printCompatibilityMessage();
+	}
 }
 
 function runExpAnim() {

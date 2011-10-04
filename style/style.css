@@ -50,6 +50,20 @@ div#header h2 {
 	/*background:url(tom.png) no-repeat center;*/
 }
 
+#compMessage {
+	display:none;
+	text-align:center;
+	color:white;
+}
+
+#compMessage ul {
+	list-style-type:none;
+}
+
+#compMessage ul a {
+	color:white;
+}
+
 .hidden {
     display:none;
 }

@@ -131,7 +131,7 @@
 				0);");
 				
 	
-	$db->query("INSERT OR REPLACE INTO links (id_skill, id_experience, size) VALUES (4, 4, 225);");
+	$db->query("INSERT OR REPLACE INTO links (id_skill, id_experience, size) VALUES (4, 4, 215);");
 
 
 	/****************************************** SITE PERSO ************************************************/

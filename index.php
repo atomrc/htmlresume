@@ -4,7 +4,7 @@
 	<head>
 		<title>Thomas Belin CV</title>
 		<link rel="stylesheet" type="text/css" href="style/style.css"/>
-		<script type="text/javascript" src="js/general.js"></script>
+		<script type="text/javascript" language="JavaScript" src="js/general.js"></script>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<link rel="shortcut icon" href="images/favicon.ico" />
 		
@@ -21,7 +21,7 @@
 		</script><noscript><p><img src="http://cv.thomasbelin.fr/piwik/piwik.php?idsite=1" style="border:0" alt="" /></p></noscript>
 		<!-- End Piwik Tracking Code -->
 		
-		<script>
+		<script type="text/javascript" language="Javascript">
 			window.onload = initCV;
 		</script>
 		
@@ -37,7 +37,14 @@
 			</div>
 			<div id="content">
 				<div id="mainContainer">
-					
+					<div id="compMessage">
+						Désolé votre navigateur n'est pas assez récent pour afficher cette page correctement.<br/>Pour profiter pleinement des nouvelles fonctionnalités d'HTML5, utilisez l'un des navigateur suivant :
+						<ul>
+							<li><a href="http://www.mozilla.org/fr/firefox/new/">Mozilla Firefox</a></li>
+							<li><a href="http://www.google.com/chrome?hl=fr">Google Chrome</a></li>
+							<li><a href="http://www.apple.com/fr/safari/">Apple Safari</a></li>
+						</ul>
+					</div>	
 				</div>
 				<div id="divMe">
 				</div>
