@@ -337,7 +337,7 @@ Cloud.prototype = {
 	//re init the cloud to his initial position	
 	reinit:function(word, position, speedClass) {
 		this.word = word 
-		this.domElement.innerHTML = this.word.text;
+		this.domElement.innerHTML = this.word.word;
 		this.domElement.className = "cloud";
 		this.domElement.style.top = position+"px";
 		this.domElement.style.left = "-20%";

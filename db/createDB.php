@@ -6,7 +6,7 @@
 	$db->query("DROP TABLE experience");
 	$db->query("DROP TABLE type_experience");
 	$db->query("DROP TABLE links");	
-	
+	$db->query("DROP TABLE words");	
 	
 	$db->query("CREATE TABLE skills (
 			_id INTEGER PRIMARY KEY,
@@ -40,7 +40,13 @@
 						size INTEGER
 						);");		
 			
-				
+	$db->query("CREATE TABLE words (
+					_id INTEGER PRIMARY KEY,
+					word TEXT,
+					description TEXT
+				);");		
+			
+
 
 	
 	$db->query("INSERT OR REPLACE INTO type_experience (_id, name) VALUES (0, 'Stage');");
@@ -193,7 +199,16 @@
 	
 	$db->query("INSERT OR REPLACE INTO links (id_skill, id_experience, size) VALUES (4, 8, 350);");
 
-	
 
+/*************************************************************
+WORDS
+*************************************************************/
+
+$db->query("INSERT INTO words (word, description) VALUES ('Musicien', 'Guitariste passioné depuis maintenant 7 ans, je joue régulièrement en groupe.')");
+$db->query("INSERT INTO words (word, description) VALUES ('Créatif', 'Un minimum d''originalité demande un minimum de créativité.')");
+$db->query("INSERT INTO words (word, description) VALUES ('Consciencieux', 'Je ne me contente jamais de faire quelque chose qui fonctionne. Je fais tout pour qu''il fonctionne le mieux possible.')");
+$db->query("INSERT INTO words (word, description) VALUES ('Sportif', 'Parce que le crédo : ''Un corps sain dans un esprit sain'' semble très important à mes yeux, je pratique régulièrement le jogging et l''aviron.')");
+$db->query("INSERT INTO words (word, description) VALUES ('Déterminé', 'J''aime me lancer des défis, et je me donne les moyens de les relever.')");
+$db->query("INSERT INTO words (word, description) VALUES ('Impliqué', 'Quand je fais quelque chose je le fais à fond.')");
 
 ?>

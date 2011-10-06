@@ -2,11 +2,12 @@
 	$db = new SQLite3("../db/datas.sqlite");
 
 	$res = $db->query("SELECT experience.*, type_experience.name as type_str FROM experience INNER JOIN type_experience ON experience.type = type_experience._id");
-	echo "{\"experience\":[";
+	$buffer = "";
+	$buffer .= "{\"experience\":[";
 
 	$sep = "";
 	while($row = $res->fetchArray()) {
-		echo $sep."{\"title\":\"".$row['title']."\", 
+		$buffer .= $sep."{\"title\":\"".$row['title']."\", 
 			\"id\":".$row['_id'].",
 			\"type\":".$row['type'].",
 			\"typeStr\":\"".$row['type_str']."\",
@@ -22,23 +23,38 @@
 
 		$sepSkill = "";
 		while($skill = $resLinks->fetchArray()) {
-			echo $sepSkill."{\"name\":\"".$skill['name']."\",
+			$buffer .= $sepSkill."{\"name\":\"".$skill['name']."\",
 				\"id\":".$skill['id_skill'].",
 				\"size\":".$skill['size']."}";
 			$sepSkill = ",";
 		}
-		echo "]}";
+		$buffer .= "]}";
 		$sep = ",";
 	}	
-	echo "], \"skills\":[";
+	$buffer .= "], \"skills\":[";
 	$resSkills = $db->query("SELECT * from skills");
 	
 	$sepSkill = "";
 	while($skill = $resSkills->fetchArray()) {
-			echo $sepSkill."{\"name\":\"".$skill['name']."\",
+			$buffer .= $sepSkill."{\"name\":\"".$skill['name']."\",
 				\"id\":".$skill['_id']."}";
 			$sepSkill = ",";
 		}
 		
-	echo "]}";	
+	$buffer .= "],
+\"words\":[";
+	
+	//GETTING THE WORDS
+	$res = $db->query("SELECT * FROM words");
+	
+	$sep ="";
+	while($row = $res->fetchArray()) {
+		$buffer .= $sep."{\"word\":\"".$row['word']."\",
+\"description\":\"".$row['description']."\"
+}";
+		$sep = ",";
+	}
+	$buffer .= "]}";
+	
+	echo $buffer;
 ?>

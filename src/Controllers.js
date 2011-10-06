@@ -120,7 +120,6 @@ CVController.prototype = {
 /* The controller that updates and draw the cloud in the document */
 function CloudController(divId) {
 	this.container = document.getElementById(divId); 
-	this.arrayOfWords = ["Créatif", "Dynamique", "Musicien", "Sportif", "Ouvert d'esprit", "Social", "Consciencieux"];
 }
 CloudController.prototype = {
 	container:null, //DOM element that will contain the cloud canvas
@@ -153,8 +152,8 @@ CloudController.prototype = {
 			this.arrayOfWords.push(cloud.word);
 		}
 		//computing a random text position in the array
-		var randTextIndex = Math.floor(Math.random() * arrayOfWords.length);
-		var word = arrayOfWords.splice(randTextIndex, 1)[0];
+		var randTextIndex = Math.floor(Math.random() * this.arrayOfWords.length);
+		var word = this.arrayOfWords.splice(randTextIndex, 1)[0];
 		
 		//computing a random position
 		var randPos = Math.floor(Math.random() * (this.containerHeight - cloud.domElement.clientHeight));

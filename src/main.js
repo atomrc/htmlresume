@@ -32,7 +32,7 @@ function initCV() {
 				if(this.status == 200){ 
 					var response = JSON.parse(this.responseText);	
 					cvController.initWithModel(response);
-					cloudController.initWithModel(arrayOfWords);
+					cloudController.initWithModel(response.words);
 				}else{ 
 					console.log("Error: returned status code " + 
 					this.status + " " + this.statusText); 
