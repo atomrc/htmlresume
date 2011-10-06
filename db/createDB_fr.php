@@ -1,6 +1,6 @@
 <?
 
-	$db = new SQLite3("datas.sqlite");
+	$db = new SQLite3("datas_fr.sqlite");
 	
 	$db->query("DROP TABLE skills");
 	$db->query("DROP TABLE experience");

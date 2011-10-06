@@ -1,5 +1,5 @@
 function changeLanguage(lang) {
-	alert(lang);	
+	language = lang;
 }
 
 //usefull browser detection found here : http://www.quirksmode.org/js/detect.html

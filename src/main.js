@@ -13,7 +13,7 @@ function getDatas(language, callback) {
 	var req = getXmlHttpRequest();
 	var response = "";
 	req.onreadystatechange = callback;
-	req.open("GET", "requests/getDatas.php", false);	
+	req.open("GET", "requests/getDatas.php?lang="+language, false);	
 	req.send(null);
 }
 

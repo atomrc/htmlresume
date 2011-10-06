@@ -23,6 +23,14 @@
 		
 		<script type="text/javascript" language="Javascript">
 			window.onload = initCV;
+			<? 
+				$lang = $_POST['lang'];
+				if(isset($lang)) {
+					echo "var lang =\"$lang\";"; 
+				}else {
+					echo "var lang =\"en\";"; 
+				}	
+			?>
 		</script>
 		
 		
@@ -31,8 +39,14 @@
 
 	<body>
 		<div id="menuBar">
-			<button onclick="changeLanguage('fr')">fr</button>	
-			<button onclick="changeLanguage('en')">en</button>	
+			<form action="" method="POST">
+				<input type="hidden" name="lang" value="en"/>
+				<input type="submit" value="en"/>
+			</form>
+			<form action="" method="POST">
+				<input type="hidden" name="lang" value="fr"/>
+				<input type="submit" value="fr"/>
+			</form>
 		</div>
 		<div id="main">
 			<div id="header">

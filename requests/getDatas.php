@@ -1,5 +1,13 @@
 <?
-	$db = new SQLite3("../db/datas.sqlite");
+	$lang = $_GET['lang'];
+	
+	$db = NULL;
+	if($lang == "en" || $lang == "fr") {
+		$db = new SQLite3("../db/datas_".$lang.".sqlite");
+	} else {
+		echo "error : Unrecognised language";
+		return;
+	}
 
 	$res = $db->query("SELECT experience.*, type_experience.name as type_str FROM experience INNER JOIN type_experience ON experience.type = type_experience._id");
 	$buffer = "";
