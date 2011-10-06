@@ -30,6 +30,10 @@
 	
 
 	<body>
+		<div id="menuBar">
+			<button onclick="changeLanguage('fr')">fr</button>	
+			<button onclick="changeLanguage('en')">en</button>	
+		</div>
 		<div id="main">
 			<div id="header">
 				<h1 id="nom">Thomas Belin</h1>

@@ -1,3 +1,7 @@
+function changeLanguage(lang) {
+	alert(lang);	
+}
+
 //usefull browser detection found here : http://www.quirksmode.org/js/detect.html
 var BrowserDetect = {
 	init: function () {

@@ -4,6 +4,13 @@ body {
     background:#628db3 url(../images/background.png) repeat-x;
 }
 
+#menuBar {
+	color:white;
+	background:black;
+	height:25px;
+	position:relative;
+}
+
 #main {
     margin:auto;	
     width:1200px;

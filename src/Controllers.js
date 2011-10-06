@@ -43,35 +43,19 @@ CVController.prototype = {
 	linkContext:null,
 	skillsContainer:null,
 	experienceContainer:null,
-	ajaxModel:null,
+	model:null,
 	linksArray:[],
 	experienceArray:[],
 
 	//initialisation des données du CV
-	init:function() {
-		var req = getXmlHttpRequest();
-		var response = "";
-		req.onreadystatechange = function(){ 
-			if(req.readyState == 4){
-        			if(req.status == 200){ 
-             				response = JSON.parse(req.responseText);	
-        			}else{ 
-              				console.log("Error: returned status code " + 
-                   			req.status + " " + xhr.statusText); 
-       				} 
-    			} 
- 		}; 
-		req.open("GET", "requests/getDatas.php", false);	
-		req.send(null);
-		
-		this.ajaxModel = response;
-
+	initWithModel:function(model) {
+		this.model = model;
 		this.draw();
 	},
 
 	draw:function() {
-		for(var skillIndex in this.ajaxModel['skills']) {
-			var skill = this.ajaxModel['skills'][skillIndex];
+		for(var skillIndex in this.model['skills']) {
+			var skill = this.model['skills'][skillIndex];
 			var skillId = "skill_"+skill.id;
 			skillDiv = document.createElement("div");
 			skillDiv.id = skillId;
@@ -80,8 +64,8 @@ CVController.prototype = {
 			this.skillsContainer.appendChild(skillDiv);
 		}
 		
-		for(var index in this.ajaxModel['experience']) {
-			var exp = this.ajaxModel['experience'][index];
+		for(var index in this.model['experience']) {
+			var exp = this.model['experience'][index];
 
 			var experience = new Experience(exp);
 			this.experienceArray.push(experience);
@@ -137,17 +121,18 @@ CVController.prototype = {
 function CloudController(divId) {
 	this.container = document.getElementById(divId); 
 	this.arrayOfWords = ["Créatif", "Dynamique", "Musicien", "Sportif", "Ouvert d'esprit", "Social", "Consciencieux"];
-	this.visibleCloud = [];
 }
 CloudController.prototype = {
 	container:null, //DOM element that will contain the cloud canvas
 	arrayOfWords:null, //the array containing all the words that may be displayed in a cloud
-	visibleCloud:null, //the array containing all the visible cloud
-	
-	init:function() {
+	visibleCloud:[], //the array containing all the visible cloud
+	containerHeight:0,
+
+	initWithModel:function(model) {
+		this.arrayOfWords=model;
 		for(var i = 0; i<nbClouds; i++) {
-			var containerHeight = parseInt(getComputedStyle(this.container, null).getPropertyValue("height"));
-			var newCloud = new Cloud(containerHeight);
+			this.containerHeight = parseInt(getComputedStyle(this.container, null).getPropertyValue("height"));
+			var newCloud = new Cloud(this);
 			this.visibleCloud.push(newCloud);
 			this.container.appendChild(newCloud.domElement);
 		}
@@ -155,14 +140,38 @@ CloudController.prototype = {
 	},
 
 	startAllAnim:function() {
-		var i = 0;
-		for(cloudIndex in this.visibleCloud) {
+		for(var cloudIndex in this.visibleCloud) {
 			var cloud = this.visibleCloud[cloudIndex];
-			var func = (function() {this.startAnim();}).bind(cloud);
-			setTimeout(func, i*2000);
-			i++;
-			
+			this.initCloud(cloud);
 		}
-	}
+	},
+
+	initCloud:function(cloud) {
+		//set a new textual value
+		if(cloud.word) {
+			//if the cloud has already a word setted, we keep the word in our array
+			this.arrayOfWords.push(cloud.word);
+		}
+		//computing a random text position in the array
+		var randTextIndex = Math.floor(Math.random() * arrayOfWords.length);
+		var word = arrayOfWords.splice(randTextIndex, 1)[0];
+		
+		//computing a random position
+		var randPos = Math.floor(Math.random() * (this.containerHeight - cloud.domElement.clientHeight));
+		
+		//computing a speed class
+		var ind = Math.floor(Math.random() * cloudSpeedClasses.length);
+		var speedClassName = cloudSpeedClasses[ind];
+	
+
+		cloud.reinit(word, randPos, speedClassName); 
+
+
+	},
+
+	cloudDidFinishAnimation:function(cloud) {
+		this.initCloud(cloud);
+		
+	},
 	
 }

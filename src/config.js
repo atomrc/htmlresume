@@ -11,6 +11,10 @@ var speedDown = new CVVector(0.95, 0.95);
 var popup = null;
 var floatPrecision = 5;
 
+//language
+var lang = "en";
+var datas = null;
+
 var nbClouds = 5;
 var cloudSpeedClasses = ["highSpeed", "middleHighSpeed", "slowSpeed", "middleSlowSpeed", "middleSpeed"];
 

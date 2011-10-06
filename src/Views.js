@@ -302,10 +302,8 @@ Link.prototype = {
 
 
 /* the class that represents the clouds */
-function Cloud(cHeight) {
-	this.containerHeight = cHeight;
-
-
+function Cloud(delegate) {
+	this.delegate = delegate;
 	this.createDomElement();
 }
 Cloud.prototype = {
@@ -313,54 +311,42 @@ Cloud.prototype = {
 	containerHeight:0,
 	domElement:null,
 	speedClassName:"",
+	delegate:null,
 
 	createDomElement:function() {
 		var elt = document.createElement("div");
 		elt.className = "cloud";
-		var trans = (function() { this.startAnim() }).bind(this);
-		elt.addEventListener("webkitTransitionEnd", trans, true);
-		elt.addEventListener("OTransitionEnd", trans, true);
-		elt.addEventListener("transitionend", trans, true);
-
+		if(this.delegate) {
+			var trans = (function() { this.delegate.cloudDidFinishAnimation(this) }).bind(this);
+			elt.addEventListener("webkitTransitionEnd", trans, true);
+			elt.addEventListener("OTransitionEnd", trans, true);
+			elt.addEventListener("transitionend", trans, true);
+		}
 		var showDetails = (function() { this.showDetails(); }).bind(this)
 		elt.onclick = showDetails;
 		this.domElement = elt;
 		
 	},
 
-	//set a random cloud speed class for the dom element
-	computeSpeedClass:function() {
-		var ind = Math.floor(Math.random() * cloudSpeedClasses.length);
-		this.speedClassName = cloudSpeedClasses[ind];
-	},
-	
 	//launch the cloud animantion
 	launchAnim:function() {
-		this.computeSpeedClass();
 		this.domElement.className = this.speedClassName + " cloud";
 		this.domElement.style.left = "100%";
 	},
 
-	//init the animation of the cloud
-	startAnim:function() {
-		this.reinit();
-		var launch = (function() {this.launchAnim()}).bind(this);
-		window.setTimeout(launch, 1);
-	},
-
 	//re init the cloud to his initial position	
-	reinit:function() {
-		//set a new textual value
-		if(this.word) {
-			arrayOfWords.push(this.word);
-		}
-		var randTextIndex = Math.floor(Math.random() * arrayOfWords.length);
-		this.word = arrayOfWords.splice(randTextIndex, 1)[0];
+	reinit:function(word, position, speedClass) {
+		this.word = word 
 		this.domElement.innerHTML = this.word.text;
-		var randPos = Math.floor(Math.random() * (this.containerHeight - this.domElement.clientHeight)); 
 		this.domElement.className = "cloud";
-		this.domElement.style.top = randPos+"px";
+		this.domElement.style.top = position+"px";
 		this.domElement.style.left = "-20%";
+		this.speedClassName = speedClass;
+
+		var randTime = Math.floor(Math.random()* 3000);
+
+		var launch = (function() {this.launchAnim()}).bind(this);
+		window.setTimeout(launch, randTime);
 
 	},
 	
