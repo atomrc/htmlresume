@@ -22,15 +22,15 @@
 		<!-- End Piwik Tracking Code -->
 		
 		<script type="text/javascript" language="Javascript">
-			window.onload = initCV;
 			<? 
-				$lang = $_POST['lang'];
-				if(isset($lang)) {
+				if(isset($_POST['lang'])) {
+					$lang = $_POST['lang'];
 					echo "var lang =\"$lang\";"; 
 				}else {
-					echo "var lang =\"en\";"; 
+					echo "var lang = getClientLanguage();";
 				}	
 			?>
+			window.onload = initCV;
 		</script>
 		
 		

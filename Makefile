@@ -5,6 +5,7 @@ FILENAME = general.js
 MINFILENAME = general-min.js
 
 FILES =\
+		$(JSDIR)text.js\
 		$(JSDIR)config.js\
 		$(JSDIR)main.js\
 		$(JSDIR)Model.js\

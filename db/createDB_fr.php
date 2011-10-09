@@ -117,7 +117,7 @@
 				'Greencopper', 
 				'', 
 				'Stage au Canada chez Greencopper, éditeur d''applications mobiles pour festivals.<br/> (été 2011)', 
-				'Mon stage, de juin à août 2011, chez Greencopper, une entreprise spécialisée dans les applications mobiles de festivals, a été très formatteur. Parmi leurs clients, on compte Rock en Seine, le Festival de Jazz de Montréal, les Vieilles Charrues ... <br/> Ce stage m''a permis de m''attaquer à des problématiques avancées d''optimisation avec le développement d''un module générique de vue calendrier pour iPhone.', 
+				'Mon stage, de juin à août 2011, chez Greencopper, une entreprise spécialisée dans les applications mobiles de festivals, a été très formateur. Parmi leurs clients, on compte Rock en Seine, le Festival de Jazz de Montréal, les Vieilles Charrues ... <br/> Ce stage m''a permis de m''attaquer à des problématiques avancées d''optimisation avec le développement d''un module générique de vue calendrier pour iPhone.', 
 				'<ul><li>Techniques d''optimisation générales (recycleur, réduction du nombre de vues dans une page, regroupement de requêtes SQL …)</li></ul>',
 				'',
 				0);");
@@ -204,7 +204,7 @@
 WORDS
 *************************************************************/
 
-$db->query("INSERT INTO words (word, description) VALUES ('Musicien', 'Guitariste passioné depuis maintenant 7 ans, je joue régulièrement en groupe.')");
+$db->query("INSERT INTO words (word, description) VALUES ('Musicien', 'Guitariste passionné depuis maintenant 7 ans, je joue régulièrement en groupe.')");
 $db->query("INSERT INTO words (word, description) VALUES ('Créatif', 'Un minimum d''originalité demande un minimum de créativité.')");
 $db->query("INSERT INTO words (word, description) VALUES ('Consciencieux', 'Je ne me contente jamais de faire quelque chose qui fonctionne. Je fais tout pour qu''il fonctionne le mieux possible.')");
 $db->query("INSERT INTO words (word, description) VALUES ('Sportif', 'Parce que le crédo : ''Un corps sain dans un esprit sain'' semble très important à mes yeux, je pratique régulièrement le jogging et l''aviron.')");

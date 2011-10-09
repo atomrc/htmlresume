@@ -49,9 +49,9 @@
 
 
 	
-	$db->query("INSERT OR REPLACE INTO type_experience (_id, name) VALUES (0, 'Stage');");
-	$db->query("INSERT OR REPLACE INTO type_experience (_id, name) VALUES (1, 'Projet personnel');");
-	$db->query("INSERT OR REPLACE INTO type_experience (_id, name) VALUES (2, 'Projet d''école');");	
+	$db->query("INSERT OR REPLACE INTO type_experience (_id, name) VALUES (0, 'Internship');");
+	$db->query("INSERT OR REPLACE INTO type_experience (_id, name) VALUES (1, 'Personal Project');");
+	$db->query("INSERT OR REPLACE INTO type_experience (_id, name) VALUES (2, 'School project');");	
 				
 			
 	$db->query("INSERT OR REPLACE INTO skills (_id, name) VALUES (0, 'Javascript');");
@@ -85,7 +85,7 @@
 				'Polytech By Night website', 
 				'', 
 				'Development of the website of the Polytech Nantes''s gala (<a href=\\\"http://polytechbynight.fr\\\">polytechbynight.fr</a>).', 
-				'This year I was member of our school gala''s organisation team, and I decided to take care of the website.  As it contains a Javascript module to book seats online and an online payement, I had to be very careful with security.', 
+				'This year I was member of the organisation team of our school''s gala, and I decided to take care of the website.  As it contains a Javascript module to book seats and an online payement, I had to be very careful with security.', 
 				'<ul><li>Handeling users with PHP</li><li>Securing a website (XSS, SQL injection)</li></ul>', 
 				'',
 				1);");
@@ -116,7 +116,7 @@
 				3, 
 				'Greencopper', 
 				'', 
-				'Internship at Greencopper, a mobile application publisher.<br/> (summer 2011)', 
+				'Internship at Greencopper, a mobile applications publisher.<br/> (summer 2011)', 
 				'My internship, from june to august 2011, at Greencopper, an company specialised in festival mobile applications, was very formative. I had to develop a generic calendar view that would be reused in their future projects. It taught me a lot of things in how to make an adaptative code and how to deal with performance issues.',
 				'<ul><li>Advanced optimisation technics (reuse, limit the use of CPU and memory, traking memory leaks, gathering SQL query …)</li></ul>',
 				'',
@@ -131,7 +131,7 @@
 				4, 
 				'DPC', 
 				'', 
-				'Internship at DPC-interactive, a mobile application publisher.<br/> (summer 2011)',
+				'Internship at DPC-interactive, a mobile applications publisher.<br/> (summer 2011)',
 				'After having developed the \\\"Vieilles Charrues\\\" iPhone app, I found that I liked the field of mobile applications. So I decided to do an intership at DPC-interactive which is a mobile applications editor.', 
 				'', 
 				0);");
@@ -174,7 +174,7 @@
 				7, 
 				'Polytech''s Transversal Project', 
 				'', 
-				'An eight month project in pairs : development, using Javascript, of a workflow designer.',
+				'An eight months project in pairs : development, using Javascript, of a workflow designer.',
 				'The main project of the fourth year at Polytech Nantes is a project, in pair, in collaboration with a company. Our project was to develop a web application to design workflows. We had the choice of the technologies, but we decided to use open standars : HTML5 and the &lt;canvas&gt; tag.', 
 				'<ul><li>Development of an interactive application using web technologies</li></ul>',
 				'', 
@@ -189,7 +189,7 @@
 				8, 
 				'Vieilles Charrues iPhone app', 
 				'', 
-				'Development of a Open Source iPhone app for the french festival \\\"les Vieilles Charrues\\\" in 2010.', 
+				'Development of an Open Source iPhone app for the french festival \\\"les Vieilles Charrues\\\" in 2010.', 
 				'In 2010, the huge french festival \\\"Les Vieilles Charrrues\\\" wanted to have an iPhone application.  I only knew the basics of Objective C but I decided to develop this application. It is an Open Source project which can be found here : <a href=\\\"https://github.com/thomasbelin4/Vieilles-Charrues-iPhone\\\">https://github.com/thomasbelin4/Vieilles-Charrues-iPhone</a>', 
 				'<ul><li>Developing for a mobile device</li><li>RTFM</li></ul>',
 				1,
@@ -204,11 +204,10 @@
 WORDS
 *************************************************************/
 
-$db->query("INSERT INTO words (word, description) VALUES ('Musicien', 'Guitariste passioné depuis maintenant 7 ans, je joue régulièrement en groupe.')");
-$db->query("INSERT INTO words (word, description) VALUES ('Créatif', 'Un minimum d''originalité demande un minimum de créativité.')");
-$db->query("INSERT INTO words (word, description) VALUES ('Consciencieux', 'Je ne me contente jamais de faire quelque chose qui fonctionne. Je fais tout pour qu''il fonctionne le mieux possible.')");
-$db->query("INSERT INTO words (word, description) VALUES ('Sportif', 'Parce que le crédo : ''Un corps sain dans un esprit sain'' semble très important à mes yeux, je pratique régulièrement le jogging et l''aviron.')");
-$db->query("INSERT INTO words (word, description) VALUES ('Déterminé', 'J''aime me lancer des défis, et je me donne les moyens de les relever.')");
-$db->query("INSERT INTO words (word, description) VALUES ('Impliqué', 'Quand je fais quelque chose je le fais à fond.')");
+$db->query("INSERT INTO words (word, description) VALUES ('Musician', 'I have been playing the guitar for 7 years.')");
+$db->query("INSERT INTO words (word, description) VALUES ('Creative', 'A little originality needs a little creativity.')");
+$db->query("INSERT INTO words (word, description) VALUES ('Consencious', 'I do everything for my projects to work the best they can.')");
+$db->query("INSERT INTO words (word, description) VALUES ('Sportsman', 'A healthy mind in a healthy body.')");
+$db->query("INSERT INTO words (word, description) VALUES ('Determined', 'J''aime me lancer des défis, et je me donne les moyens de les relever.')");
 
 ?>

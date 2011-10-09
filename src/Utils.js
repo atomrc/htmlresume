@@ -1,5 +1,8 @@
-function changeLanguage(lang) {
-	language = lang;
+function getClientLanguage() {
+	var frReg = new RegExp("fr", "i");
+	var navLang = navigator.language;
+	if(navLang.match(frReg)) { return "fr"; }
+	return "en";
 }
 
 //usefull browser detection found here : http://www.quirksmode.org/js/detect.html
