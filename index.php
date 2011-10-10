@@ -51,7 +51,7 @@
 		<div id="main">
 			<div id="header">
 				<h1 id="nom">Thomas Belin</h1>
-				<h2 id="title">Elève Ingénieur à Polytech'Nantes (promotion 2012)</h2>
+				<h2 id="title"></h2>
 			</div>
 			<div id="content">
 				<div id="mainContainer">

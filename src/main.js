@@ -19,6 +19,11 @@ function getDatas(language, callback) {
 
 //Init the resume controller
 function initCV() {
+	if(lang == "fr") {
+		document.getElementById("title").innerHTML = titleHeader.fr; 
+	} else {
+		document.getElementById("title").innerHTML = titleHeader.en; 
+	}
 
 	if(isCompatible()) {
 		document.onkeypress = keyPressed;
