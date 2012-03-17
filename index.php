@@ -4,7 +4,7 @@
 	<head>
 		<title>Thomas Belin CV</title>
 		<link rel="stylesheet" type="text/css" href="style/style.css"/>
-		<script type="text/javascript" language="JavaScript" src="js/general.js"></script>
+		<script type="text/javascript" language="JavaScript" src="js/general-min.js"></script>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<link rel="shortcut icon" href="images/favicon.ico" />
 		

@@ -1,16 +1,16 @@
 /****************************************** 
 	MODEL 
 ******************************************/
-function Word(text, desc) {
-	this.text = text;
+function Word(word, desc) {
+	this.word = word;
 	this.desc = desc;
 }
 
 Word.prototype = {
-	text:null,
+	word:null,
 	desc:null,
 
 	getHTMLDescription:function() {
-		return "<h1>"+this.text+"</h1><p>"+this.desc+"</p>";
+		return "<h1>"+this.word+"</h1><p>"+this.desc+"</p>";
 	},
 }

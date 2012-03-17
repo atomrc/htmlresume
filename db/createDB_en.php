@@ -117,8 +117,8 @@
 				'Greencopper', 
 				'', 
 				'Internship at Greencopper, a mobile applications publisher.<br/> (summer 2011)', 
-				'My internship, from june to august 2011, at Greencopper, a company specialised in festival mobile applications, was very formative. I had to develop a generic calendar view that would be reused in their future projects. It taught me a lot of things in how to make an adaptative code and how to deal with performance issues.',
-				'<ul><li>Advanced optimisation technics (reuse, limit the use of CPU and memory, traking memory leaks, gathering SQL query …)</li></ul>',
+				'My internship, from june to august 2011, at Greencopper, a company specialised in festival mobile applications, was very formative. I had to develop a generic calendar view that would be reused in their future projects. It taught me a lot of things about how to make an adaptative code and how to deal with performance issues.',
+				'<ul><li>Advanced optimisation technics (memory reuse, dynamic objects allocation,  limiting the use of CPU, traking memory leaks, gathering SQL query …)</li></ul>',
 				'',
 				0);");
 				

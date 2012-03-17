@@ -129,6 +129,10 @@ CloudController.prototype = {
 
 	initWithModel:function(model) {
 		this.arrayOfWords=model;
+    for(var wordIndex in this.arrayOfWords) {
+      wordIndex = parseInt(wordIndex)
+      this.arrayOfWords[wordIndex] = new Word(this.arrayOfWords[wordIndex].word, this.arrayOfWords[wordIndex].description);
+    }
 		for(var i = 0; i<nbClouds; i++) {
 			this.containerHeight = parseInt(getComputedStyle(this.container, null).getPropertyValue("height"));
 			var newCloud = new Cloud(this);
