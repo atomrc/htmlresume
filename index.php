@@ -8,20 +8,8 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<link rel="shortcut icon" href="images/favicon.ico" />
 		
-		<!-- Piwik -->
+				
 		<script type="text/javascript">
-		var pkBaseURL = (("https:" == document.location.protocol) ? "https://cv.thomasbelin.fr/piwik/" : "http://cv.thomasbelin.fr/piwik/");
-		document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
-		</script><script type="text/javascript">
-		try {
-		var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
-		piwikTracker.trackPageView();
-		piwikTracker.enableLinkTracking();
-		} catch( err ) {}
-		</script><noscript><p><img src="http://cv.thomasbelin.fr/piwik/piwik.php?idsite=1" style="border:0" alt="" /></p></noscript>
-		<!-- End Piwik Tracking Code -->
-		
-		<script type="text/javascript" language="Javascript">
 			<? 
 				if(isset($_POST['lang'])) {
 					$lang = $_POST['lang'];
@@ -38,12 +26,25 @@
 	
 
 	<body>
+	<!-- Piwik -->
+		<script type="text/javascript">
+		var pkBaseURL = (("https:" == document.location.protocol) ? "https://cv.thomasbelin.fr/piwik/" : "http://cv.thomasbelin.fr/piwik/");
+		document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+		</script><script type="text/javascript">
+		try {
+		var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
+		piwikTracker.trackPageView();
+		piwikTracker.enableLinkTracking();
+		} catch( err ) {}
+		</script><noscript><p><img src="http://cv.thomasbelin.fr/piwik/piwik.php?idsite=1" style="border:0" alt="" /></p></noscript>
+		<!-- End Piwik Tracking Code -->
+
 		<div id="menuBar">
-			<form action="" method="POST">
+			<form action="#" method="POST">
 				<input type="hidden" name="lang" value="en"/>
 				<input type="submit" value="en"/>
 			</form>
-			<form action="" method="POST">
+			<form action="#" method="POST">
 				<input type="hidden" name="lang" value="fr"/>
 				<input type="submit" value="fr"/>
 			</form>
